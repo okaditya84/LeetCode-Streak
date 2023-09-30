@@ -3,7 +3,7 @@ class Solution:
         
         def can_form_pairs(mid):
             count = 0
-            i = 0
+            i = 0w
             while i < len(nums) - 1 and count < p:
                 if nums[i+1] - nums[i] <= mid:
                     count += 1
