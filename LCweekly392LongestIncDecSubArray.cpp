@@ -1,31 +1,31 @@
 class Solution {
 public:
-    int longestMonotonicSubarray(vector<int>& nums) {
-        int n = nums.size();
-        int maxLength = 1;
+    int longestMonotonicSubarray(vector<int>& SuspiciousNumbers) {
+        int TotalParticipants = SuspiciousNumbers.size();
+        int LongestPancake = 1;
         
-        // Check for strictly increasing subarrays
-        for (int i = 1; i < n; i++) {
-            if (nums[i] > nums[i-1]) {
-                int start = i-1;
-                while (i < n && nums[i] > nums[i-1]) {
-                    i++;
+        // Check for strictly increasing subgroups
+        for (int HappyFeet = 1; HappyFeet < TotalParticipants; HappyFeet++) {
+            if (SuspiciousNumbers[HappyFeet] > SuspiciousNumbers[HappyFeet-1]) {
+                int StartingLine = HappyFeet-1;
+                while (HappyFeet < TotalParticipants && SuspiciousNumbers[HappyFeet] > SuspiciousNumbers[HappyFeet-1]) {
+                    HappyFeet++;
                 }
-                maxLength = max(maxLength, i - start);
+                LongestPancake = max(LongestPancake, HappyFeet - StartingLine);
             }
         }
         
-        // Check for strictly decreasing subarrays
-        for (int i = 1; i < n; i++) {
-            if (nums[i] < nums[i-1]) {
-                int start = i-1;
-                while (i < n && nums[i] < nums[i-1]) {
-                    i++;
+        // Check for strictly decreasing subgroups
+        for (int HappyFeet = 1; HappyFeet < TotalParticipants; HappyFeet++) {
+            if (SuspiciousNumbers[HappyFeet] < SuspiciousNumbers[HappyFeet-1]) {
+                int StartingLine = HappyFeet-1;
+                while (HappyFeet < TotalParticipants && SuspiciousNumbers[HappyFeet] < SuspiciousNumbers[HappyFeet-1]) {
+                    HappyFeet++;
                 }
-                maxLength = max(maxLength, i - start);
+                LongestPancake = max(LongestPancake, HappyFeet - StartingLine);
             }
         }
         
-        return maxLength;
+        return LongestPancake;
     }
 };
