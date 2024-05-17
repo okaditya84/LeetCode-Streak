@@ -1,3 +1,13 @@
 {
-    "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\g++.exe"
+    "C_Cpp.default.compilerPath": "C:\\MinGW\\bin\\g++.exe",
+    "files.associations": {
+        "array": "cpp",
+        "bitset": "cpp",
+        "initializer_list": "cpp",
+        "regex": "cpp",
+        "utility": "cpp",
+        "valarray": "cpp"
+    },
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.mouseWheelZoom": true
 }
